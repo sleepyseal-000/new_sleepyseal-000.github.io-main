@@ -2206,6 +2206,11 @@ input, select, textarea {
 		display: inline-block;
 		margin-right: 10px;
 		margin-top: 10px;
+		transition: transform 0.3s ease;
+	  }
+
+	  .skills .skill:hover {
+		transform: scale(1.2);
 	  }
 
 	  .course{
@@ -2253,3 +2258,44 @@ input, select, textarea {
 
 		color: green;
 	  }
+
+	.cell {
+		width: 4em;
+		height: 4em;
+		border: 0.1em solid;
+		box-shadow: 0 0 0 2px;
+		line-height: 75px;
+		font-size: 2em;
+		cursor: pointer;
+	}
+	
+	#cellContainer {
+		display: grid;
+		grid-template-columns: repeat(3, auto);
+		width: 12em;
+	}
+	
+	#gameContainer {
+		font-family: "Comic Sans MS", cursive;
+		text-align: center;
+		margin: auto;
+		padding: 2px 250px 200px 2px;
+		
+	
+	}
+	
+	/* Media query for screens 600px or smaller */
+	@media (max-width: 600px) {
+		.cell {
+			width: 2.5em;   /* Make the cell smaller */
+			height: 2.5em;  /* Reduce height */
+			line-height: 50px; /* Adjust line height for better text alignment */
+			font-size: 1.5em;  /* Reduce font size */
+		}
+	
+		#cellContainer {
+			width: 8em; /* Make the grid container narrower */
+		}
+	}
+	
+
